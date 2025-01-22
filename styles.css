@@ -1,0 +1,74 @@
+/* UNIVERSALISTS */
+:root {
+    --color-primary: #07cff2;
+    --color-secondary: #ffffff;
+    --text-primary: #1e1d1d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 1200px;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.mega-container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    height: 100vh;
+}
+
+/* ICONS */
+
+.social-icon {
+    width: 3vw;
+    height: auto;
+}
+
+.project-icon {
+    width: 5vw;
+    height: auto;
+}
+
+.contact-icon {
+    width: 5vw;
+    height: auto;
+}
+
+.contact-social-icon {
+    width: 5vw;
+    height: auto;
+}
+
+/* ABOUT */
+
+.about-container {
+    background-color: var(--color-primary);
+}
+
+.about-pic {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* WORK */
+
+.work-container {
+    background-color: var(--color-secondary);
+}
+
+/* CONTACT */
+
+.contact-container {
+    background-color: var(--color-primary);
+}
+
+.contact-pic {
+    width: 300px;
+    height: auto;
+}
