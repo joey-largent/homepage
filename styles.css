@@ -2,9 +2,10 @@
 :root {
     --color-primary: #05a3bf;
     --color-secondary: #ffffff;
-    --text-primary: #1e1d1d;
+    --text-primary: #2c2b2b;
+    --text-secondary: #5f5d5d;
     --shadow-color: #00000080;
-    --fancy-font: 'Lobster', cursive;
+    --fancy-font: 'Playfair Display', serif;
     --normal-font: 'Roboto', sans-serif;
 }
 
@@ -16,6 +17,11 @@
 
 html {
     font-size: 62.5%;
+}
+
+html, body {
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 a:hover {
@@ -36,17 +42,19 @@ a:hover {
 }
 
 .project-icon {
-    width: 5vw;
+    width: 3vw;
     height: auto;
 }
 
 .contact-icon {
-    width: 5vw;
+    width: 2vw;
     height: auto;
+    fill: var(--color-secondary);
+    margin-right: 1rem;
 }
 
 .contact-social-icon {
-    width: 5vw;
+    width: 3vw;
     height: auto;
 }
 
@@ -62,10 +70,10 @@ a:hover {
 .about-container:before {
     content: '';
     position: absolute;
-    top: -35%;
+    top: -108%;
     left: -20%;
     width: 150%;
-    height: 125%;
+    height: 175%;
     background-color: var(--color-primary);
     box-shadow: 0 0 10px var(--shadow-color);
     z-index: -1;
@@ -73,15 +81,22 @@ a:hover {
 }
 
 .the-name {
-    font-size: 2.75rem;
+    font-size: 2.3rem;
+    font-weight: 100;
     color: var(--color-secondary);
     font-family: var(--fancy-font);
     z-index: 3;
     position: relative;
-    top: -15%;
-    left: 16%;
+    top: -13%;
+    left: 5%;
+    text-shadow: 0 0 20px var(--shadow-color);
 }
-
+.photo-with-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 .about-pic {
     width: 250px;
     height: 250px;
@@ -95,20 +110,21 @@ a:hover {
 
 .about-me-div {
     background-color: var(--color-secondary);
-    padding: 1rem;
+    padding: 1.3rem;
     box-shadow: 0 0 10px var(--shadow-color);
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 7rem 2rem 6rem 0rem;
+    margin: 7rem 4rem 2rem 0rem;
     height: 25vh;
     box-sizing: content-box;
     min-width: 40vw;
 }
 
-.about-head {
+.about-head, .work-head {
     font-size: 2rem;
+    font-weight: 500;
     font-family: var(--fancy-font);
     color: var(--text-primary);
     margin-bottom: 1rem;
@@ -120,23 +136,110 @@ a:hover {
     margin-top: 2rem;
 }
 
-.social-link {
-    padding-left: 0.5rem;;
+.about-text {
+    font-size: 1rem;
+    font-family: var(--normal-font);
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.4rem;
 }
+
 
 /* WORK */
 
 .work-container {
     background-color: var(--color-secondary);
+    padding: 4rem;
+    position: relative;
+    z-index: -3;
+}
+
+.work-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.project {
+    box-shadow: 0 0 10px var(--shadow-color);
+}
+
+.project-screenshot {
+    padding: 3.3rem;
+    text-align: center;
+    font-family: var(--fancy-font);
+    font-size: 2rem;
+    background-color:rgb(165, 114, 207);
+    color: var(--color-secondary);
+}
+
+.project-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.project-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: var(--fancy-font);
+    color: var(--text-primary);
+}
+
+.project-text {
+    font-size: 1rem;
+    font-family: var(--normal-font);
+    color: var(--text-secondary);
+    padding: 0rem 1.5rem 1.5rem;
 }
 
 /* CONTACT */
 
 .contact-container {
     background-color: var(--color-primary);
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
+}
+
+.contact-head {
+    font-size: 2rem;
+    font-weight: 200;
+    font-family: var(--fancy-font);
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-text, .address, .contact-info {
+    font-size: 1.2rem;
+    font-family: var(--normal-font);
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+}
+
+.phone, .email {
+    display: flex;
+    align-items: center;
+}
+
+.contact-socials {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2rem;
+}
+
+.social-link {
+    margin-right: 1rem;
 }
 
 .contact-pic {
-    width: 300px;
+    width: 450px;
     height: auto;
 }
