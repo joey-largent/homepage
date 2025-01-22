@@ -1,8 +1,11 @@
 /* UNIVERSALISTS */
 :root {
-    --color-primary: #07cff2;
+    --color-primary: #05a3bf;
     --color-secondary: #ffffff;
     --text-primary: #1e1d1d;
+    --shadow-color: #00000080;
+    --fancy-font: 'Lobster', cursive;
+    --normal-font: 'Roboto', sans-serif;
 }
 
 * {
@@ -47,14 +50,56 @@ html {
 /* ABOUT */
 
 .about-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+.about-container:before {
+    content: '';
+    position:absolute;
+    top: -35%;
+    left: -20%;
+    width: 150%;
+    height: 125%;
     background-color: var(--color-primary);
+    box-shadow: 0 0 10px var(--shadow-color);
+    z-index: -1;
+    transform: rotate(-15deg);
+}
+
+.the-name {
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+    font-family: var(--fancy-font);
 }
 
 .about-pic {
     width: 250px;
     height: 250px;
     object-fit: cover;
+    z-index: 2;
+    box-shadow: 0 0 10px var(--shadow-color);
+    margin-top: 4rem;
+    margin-left: 4rem;
+    position: relative;
 }
+
+.about-me-div {
+    background-color: var(--color-secondary);
+    padding: 2rem;
+    box-shadow: 0 0 10px var(--shadow-color);
+    z-index: 1;
+    position: relative;
+    margin: 6rem 2rem 6rem 0rem;
+    display: flex;
+    height: 30vh;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.abou
 
 /* WORK */
 
