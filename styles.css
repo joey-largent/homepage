@@ -80,46 +80,45 @@ a:hover {
     transform: rotate(-15deg);
 }
 
+.photo-with-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-pic {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    z-index: 2;
+    box-shadow: 0 0 10px var(--shadow-color);
+    margin-top: 2rem;
+    margin-left: 4rem;
+    position: relative;
+}
+
 .the-name {
-    font-size: 2.3rem;
+    font-size: 3rem;
     font-weight: 100;
     color: var(--color-secondary);
     font-family: var(--fancy-font);
     z-index: 3;
     position: relative;
-    top: -13%;
-    left: 5%;
+    top: 30%;
+    left: -50%;
     text-shadow: 0 0 20px var(--shadow-color);
-}
-.photo-with-name {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-.about-pic {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    z-index: 2;
-    box-shadow: 0 0 10px var(--shadow-color);
-    margin-top: 4rem;
-    margin-left: 4rem;
-    position: relative;
 }
 
 .about-me-div {
     background-color: var(--color-secondary);
-    padding: 1.3rem;
+    padding: 2rem;
     box-shadow: 0 0 10px var(--shadow-color);
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 7rem 4rem 2rem 0rem;
     height: 25vh;
     box-sizing: content-box;
-    min-width: 40vw;
 }
 
 .about-head, .work-head {
